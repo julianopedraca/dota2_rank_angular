@@ -1,0 +1,15 @@
+.profile__container {
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.profile__accountId {
+  color: rgb(134, 134, 134);
+  font-size: 0.6rem;
+  margin-top: 2px;
+}
+
+.profile__mmrEstimate {
+  font-size: 0.8rem;
+  font-weight: 50;
+}

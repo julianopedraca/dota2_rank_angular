@@ -1,0 +1,36 @@
+.container__welcome-card {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.welcome-card__title > h1 {
+  margin-bottom: 10px;
+}
+
+.welcome-card__content {
+  margin-bottom: 10px;
+}
+
+.welcome-card__content > p {
+  color: rgb(134, 134, 134);
+}
+
+.welcome-card__search-bar > input {
+  background-color: white;
+  padding: 4px;
+  border: none;
+  color: black;
+}
+
+.welcome-card__search-button > button {
+  margin-top: 5px;
+  border: none;
+  background-color: #ff3515;
+  font-weight: bold;
+  padding: 6px;
+}
+
+.welcome-card__divider > hr {
+  margin-top: 5px;
+  margin-left: -10px;
+}

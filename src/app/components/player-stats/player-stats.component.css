@@ -1,0 +1,15 @@
+.stats__container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.stats__matches > table {
+  background-color: #1b2435;
+}
+
+.stats__matches > table > tr > th,td {
+  text-align: left;
+  padding: 8px;
+  background-color: #1b2435;
+
+}
