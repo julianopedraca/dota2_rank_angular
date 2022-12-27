@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,6 +9,7 @@ import { PlayerInfoComponent } from './components/player-info/player-info.compon
 import { PlayerStatsComponent } from './components/player-stats/player-stats.component';
 import { WelcomeCardComponent } from './components/welcome-card/welcome-card.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HeroIdToHeroNamePipe } from './pipes/function/hero-id-to-hero-name.pipe';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,16 @@ import { HomeComponent } from './pages/home/home.component';
     WelcomeCardComponent,
     PlayerInfoComponent,
     PlayerStatsComponent,
-    HomeComponent
+    HomeComponent,
+    HeroIdToHeroNamePipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
