@@ -10,9 +10,8 @@
   <div class="welcome-card__search-bar">
     <input type="text" placeholder="type your account id" [(ngModel)]="accountId" name="accountId">
   </div>
-  <p>{{ accountId }}</p>
   <div class="welcome-card__search-button">
-    <button (click)="searchId(accountId);clearSearch()">Search</button>
+    <button (click)="sendSteamId(accountId)">Search</button>
   </div>
   <div class="welcome-card__divider">
     <hr>

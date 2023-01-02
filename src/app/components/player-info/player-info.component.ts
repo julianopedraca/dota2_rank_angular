@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { Dota2ApiService } from '../../services/dota2-api.service';
 import { playerInfoData } from '../../model/playerInfoData';
+import { DataService } from "../../services/data-service.service";
+
 
 @Component({
   selector: 'app-player-info',
@@ -8,6 +10,8 @@ import { playerInfoData } from '../../model/playerInfoData';
   styleUrls: ['./player-info.component.css'],
 })
 export class PlayerInfoComponent implements OnInit {
+  steamId: number  = 0
+
   playerData: playerInfoData = {
     mmr_estimate: {
       estimate: 0,
@@ -18,12 +22,26 @@ export class PlayerInfoComponent implements OnInit {
       personaname: '',
     },
   };
-  constructor(private service: Dota2ApiService) {}
+
+  constructor(private service: Dota2ApiService,
+    private dataservice:DataService) {
+
+    }
+
 
   ngOnInit(): void {
-    this.service.getPlayerInfo().subscribe({
+    this.dataservice.receiveSteamId().subscribe((steamId) =>{
+      this.steamId = steamId
+      this.getSteamId()
+    })
+  }
+
+
+
+
+  getSteamId(){
+    this.service.getPlayerInfo(this.steamId).subscribe({
       next: (res) => {
-        console.log(res);
         this.playerData = {
           mmr_estimate: {
             estimate: res.mmr_estimate.estimate,
@@ -37,4 +55,6 @@ export class PlayerInfoComponent implements OnInit {
       },
     });
   }
+
+
 }

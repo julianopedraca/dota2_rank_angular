@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from "../../services/data-service.service";
+
 
 @Component({
   selector: 'app-welcome-card',
@@ -6,13 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./welcome-card.component.css']
 })
 export class WelcomeCardComponent {
-  accountId: number | null = null
+  accountId!: number
 
-  searchId(accountId:number | null){
-    console.log(accountId)
+  constructor (private dataService : DataService) {
   }
 
-  clearSearch(){
-    this.accountId = null
+  sendSteamId(steamId:number){
+    this.dataService.sendSteamId(steamId)
   }
+
 }

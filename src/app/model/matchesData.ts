@@ -14,4 +14,5 @@ export type MatchesData = {
   skill: null;
   start_time: number;
   version: null
+  win: number
 }[];

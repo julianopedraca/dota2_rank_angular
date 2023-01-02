@@ -7,11 +7,12 @@ import { Injectable } from '@angular/core';
 })
 export class MatchResultService {
 
-  matchesResultUrl="https://api.opendota.com/api/players/27824489/matches?win=1"
+  matchesResultUrl= `https://api.opendota.com/api/matches/`
+
 
   constructor(private http:HttpClient) { }
 
-  getMatchResult():Observable<any>{
-    return this.http.get<any>(this.matchesResultUrl);
+  getMatchResult(match_id: number):Observable<any>{
+    return this.http.get<any>(this.matchesResultUrl+match_id);
   }
 }

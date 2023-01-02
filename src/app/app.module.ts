@@ -10,6 +10,7 @@ import { PlayerStatsComponent } from './components/player-stats/player-stats.com
 import { WelcomeCardComponent } from './components/welcome-card/welcome-card.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeroIdToHeroNamePipe } from './pipes/function/hero-id-to-hero-name.pipe';
+import { MatchResultPipe } from './pipes/customdata/match-result.pipe';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,16 @@ import { HeroIdToHeroNamePipe } from './pipes/function/hero-id-to-hero-name.pipe
     PlayerStatsComponent,
     HomeComponent,
     HeroIdToHeroNamePipe,
+    MatchResultPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
+  ],
+  exports:[
+    PlayerInfoComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

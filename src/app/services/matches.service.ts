@@ -7,11 +7,12 @@ import {MatchesData} from '../model/matchesData'
   providedIn: 'root',
 })
 export class MatchesService {
-  private matchesUrl = 'https://api.opendota.com/api/players/27824489/matches';
+  private matchesUrl = 'https://api.opendota.com/api/players/';
 
   constructor(private http: HttpClient) {}
 
-  getMatches():Observable<MatchesData> {
-    return this.http.get<MatchesData>(this.matchesUrl);
+
+  getMatches(steamId:number | null):Observable<MatchesData> {
+    return this.http.get<MatchesData>(`${this.matchesUrl}${steamId}/recentMatches`);
   }
 }
