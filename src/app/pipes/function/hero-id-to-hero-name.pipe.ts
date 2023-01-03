@@ -11,12 +11,10 @@ export class HeroIdToHeroNamePipe implements PipeTransform {
   }
 
   constructor (private playerstats: PlayerStatsComponent){
-    this.playerstats.heroesName
   }
 
 
   heroIdToHeroName(id: number): string {
-    console.log('heroIdtoHeoname execution')
     for (const hero of this.playerstats.heroesName) {
       if (hero.id === id) {
         return hero.localized_name;

@@ -11,5 +11,17 @@
   text-align: left;
   padding: 8px;
   background-color: #1b2435;
+}
 
+
+.stats__hero-img {
+  max-width: 100px;
+}
+
+.win {
+  color:green
+}
+
+.lose{
+  color: red
 }

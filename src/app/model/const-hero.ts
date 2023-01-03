@@ -1,4 +1,4 @@
-export type HeroesData = {
+export type ConstHeroes = {
   id: number;
   name: string;
   localized_name: string;

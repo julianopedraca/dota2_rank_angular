@@ -11,6 +11,7 @@ import { WelcomeCardComponent } from './components/welcome-card/welcome-card.com
 import { HomeComponent } from './pages/home/home.component';
 import { HeroIdToHeroNamePipe } from './pipes/function/hero-id-to-hero-name.pipe';
 import { MatchResultPipe } from './pipes/customdata/match-result.pipe';
+import { HeroIdToHeroImgPipe } from './pipes/function/hero-id-to-hero-img.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MatchResultPipe } from './pipes/customdata/match-result.pipe';
     HomeComponent,
     HeroIdToHeroNamePipe,
     MatchResultPipe,
+    HeroIdToHeroImgPipe,
   ],
   imports: [
     BrowserModule,
