@@ -28,4 +28,4 @@ export type HeroesData = {
   turn_rate: number | null;
   cm_enabled: boolean;
   legs: number;
-}[]
+}

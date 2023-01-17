@@ -1,0 +1,38 @@
+<div class="match__container">
+  <table class="match__table">
+    <tr>
+      <th>Player</th>
+      <th>LVL</th>
+      <th>K</th>
+      <th>D</th>
+      <th>A</th>
+      <th>LH</th>
+      <th>D</th>
+      <th>NET</th>
+      <th>GPM</th>
+      <th>XPM</th>
+      <th>HD</th>
+      <th>TD</th>
+      <th>HH</th>
+      <th>ITENS</th>
+      <th>BUFFS</th>
+    </tr>
+    <tr *ngFor="let item of matchData.players">
+      <td>{{ item.hero_id  }}{{ item.account_id }}</td>
+      <td>{{ item.level }}</td>
+      <td>{{ item.kills }}</td>
+      <td>{{ item.deaths }}</td>
+      <td>{{ item.assists }}</td>
+      <td>{{ item.last_hits }}</td>
+      <td>{{ item.denies }}</td>
+      <td>{{ item.net_worth }}</td>
+      <td>{{ item.gold_per_min }}</td>
+      <td>{{ item.xp_per_min }}</td>
+      <td>{{ item.hero_damage }}</td>
+      <td>{{ item.tower_damage }}</td>
+      <td>{{ item.hero_healing }}</td>
+      <td>{{ item.item_0 }}</td>
+      <td>{{ item.permanent_buffs }}</td>
+    </tr>
+  </table>
+</div>

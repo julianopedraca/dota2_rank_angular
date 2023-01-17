@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MatchesData } from '../../model/matchesData';
-import { ConstHeroesService } from '../../services/const-heroes-service.service';
-import { MatchesService } from '../../services/matches.service';
-import { HeroesData } from './../../model/HeroesData';
-import { DataService } from './../../services/data-service.service';
-import { MatchResultService } from './../../services/match-result.service';
+import { MatchesData } from '../../../../model/matchesData';
+import { ConstHeroesService } from '../../../../services/const-heroes.service';
+import { MatchesService } from '../../../../services/matches.service';
+import { HeroesData } from '../../../../model/HeroesData';
+import { DataService } from '../../../../services/data-service.service';
+import { MatchResultService } from '../../../../services/match-result.service';
 
 @Component({
   selector: 'app-player-stats',
@@ -14,7 +14,7 @@ import { MatchResultService } from './../../services/match-result.service';
 })
 export class PlayerStatsComponent implements OnInit {
   matchesData: MatchesData = [];
-  heroesName: HeroesData = [];
+  heroesName: HeroesData[] = [];
   heroImage: string = '';
 
   steamId: number = 0;

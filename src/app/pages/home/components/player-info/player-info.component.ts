@@ -1,7 +1,7 @@
 import { Component,  OnInit } from '@angular/core';
-import { Dota2ApiService } from '../../services/dota2-api.service';
-import { playerInfoData } from '../../model/playerInfoData';
-import { DataService } from "../../services/data-service.service";
+import { Dota2ApiService } from '../../../../services/dota2-api.service';
+import { playerInfoData } from '../../../../model/playerInfoData';
+import { DataService } from "../../../../services/data-service.service";
 
 
 @Component({

@@ -1,0 +1,11 @@
+.match__container > table {
+  margin: auto;
+  margin-top: 15px;
+  background-color: #1b2435;
+}
+
+.match__container > table > tr > th,td {
+  text-align: left;
+  padding: 8px;
+  background-color: #1b2435;
+}

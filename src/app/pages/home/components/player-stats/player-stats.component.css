@@ -25,3 +25,7 @@
 .lose{
   color: red
 }
+
+a {
+  text-decoration: none;
+}

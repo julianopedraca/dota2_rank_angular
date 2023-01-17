@@ -16,13 +16,11 @@
       <div>
 
       </div>
-      <tr *ngFor=" let i = index; let item of matchesData" >
-        <td><img class="stats__hero-img" src='{{matchesData[i].hero_id | heroIdToHeroImg}}' alt=""></td>
-        <td > {{matchesData[i].hero_id | heroIdToHeroName}}</td>
+      <tr *ngFor="let i = index; let item of matchesData"  >
+        <td [routerLink]="['match']" style="cursor:pointer"><img class="stats__hero-img" src='{{matchesData[i].hero_id | heroIdToHeroImg}}' alt=""></td>
+        <td [routerLink]="['match']"> {{matchesData[i].hero_id | heroIdToHeroName}}</td>
         <td>{{matchesData[i].kills}}/{{matchesData[i].deaths}}/{{matchesData[i].assists}}</td>
         <td [ngClass]="{'win':matchesData[i].win === 1, 'lose':matchesData[i].win === 0}">{{matchesData[i].win | matchResult}}</td>
-
-        <td></td>
       </tr>
     </table>
   </div>
